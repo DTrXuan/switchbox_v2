@@ -39,9 +39,10 @@ void loop() {
   if (Serial.available() > 0) {
     incomingByte = Serial.read();
     /*
-    T15 rx: dxxxxx1xx
-    T30 rx: dxxxx1xxx
-    TAux rx:dxxxxxx1x
+    T15   rx: dxxxxx1xx
+    T30   rx: dxxxx1xxx
+    TAux  rx: dxxxxxx1x
+    Raw   rx: b11
     */
     if (incomingByte != -1) {
       if (incomingByte == 'd') {
